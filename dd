@@ -1,0 +1,15 @@
+git clone https://github.com/ouor/vits
+
+cd vits
+python -m venv .venv
+
+.venv/Scripts/activate
+pip3 install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 --index-url https://download.pytorch.org/whl/cu117
+pip install -r requirements.txt
+cd monotonic_align
+
+mkdir monotonic_align
+
+python setup.py build_ext --inplace
+
+cd ..
